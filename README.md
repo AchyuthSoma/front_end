@@ -1,2 +1,5 @@
 # front_end
-First Repository
+
+Hi,
+
+Achyuth here, I am learning front end development.
