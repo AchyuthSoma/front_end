@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Frontend Mentor | Huddle landing page with single introductory section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    @media screen and (min-width: 400px) and (max-width: 1440px){
+      body{
+        padding: 30px 50px 10px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background: url("Images/bg-desktop.svg") rgb(100, 63, 168) 100% 100% no-repeat;
+        }
+      button{
+        width: 180px;
+        height: 45px;
+        border-radius: 25px;
+        color: rgb(117, 62, 179);
+        background-color: white;
+        font-size: 15px;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+      }
+      button:hover{
+        transform: scale(1.05);
+      }
+      #i1{
+        width: 170px;
+        height: 50px;
+      }
+      #i2{
+        width: 600px;
+        height: 400px;
+      }
+      #test1::before{
+        content: '\f09a';
+      }
+      #test2::before{
+        content: '\f099';
+      }
+      #test3::before{
+        content: '\f113';
+      }
+      #reader{
+        font-size: 15px;
+      }
+      .test{
+        color:#fff;
+        background: #DB6E82;
+        border-radius:4px;
+        text-align:center;
+        text-decoration:none;
+        font-family:fontawesome;
+        position: relative;
+        display: inline-block;
+        width:40px;
+        height:28px;
+        padding-top:12px;
+        margin:0 2px;
+        -o-transition:all .5s;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        transition: all .5s;
+        -webkit-font-smoothing: antialiased;
+      }
+      .content{
+        position: fixed;
+        top: 110px;
+        right: 90px;
+        color: white;
+        width: 450px;
+        height: 300px;
+      }
+      .fa{
+        font-size: 18px;
+        width: 30px;
+        border-radius: 50%;
+        color: white;
+        background: transparent;
+        text-align: center;
+        border: 1.5px solid white;
+        padding: 10px;
+        margin: 5px 5px;
+        transform: scaleY(1.05);
+      }
+      .fa:hover{
+        opacity: 0.7;
+        transform: scale(1.05);
+      }
+      .social{
+        position: absolute;
+        right: 150px;
+        bottom: 60px;
+      }
+    }
+    a span{
+      color: rgb(100, 63, 168);
+      position: absolute;
+      background: white;
+      visibility: hidden;
+      font-size: 15px;
+      opacity: 0;
+      bottom: 0;
+      left: -30px;
+      right: -30px;
+      padding: 5px 0px 5px;
+      border-radius: 5px;
+    }
+    a:hover span{
+      visibility: visible;
+      opacity: 1;
+      bottom: 40px;
+    }
+    @media screen and (max-width: 400px){
+      body{
+        width: 200%;
+        height: 100%;
+        margin: 0px;
+        padding: 15%;
+        display: block;
+        background: url("Images/bg-mobile.svg") hsl(257, 40%, 49%)  no-repeat center fixed;
+        background-size: cover;
+        font-family: 'lucida sans';
+      }
+      button{
+        width: 50%;
+        height: 20%;
+        font-size: 15px;
+        background-color: white;
+        color: hsl(257, 40%, 49%);
+        border-radius: 35px;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+      }
+      button:hover{
+        transform: scale(1.05);
+      }
+      footer{
+        position: absolute;
+        bottom: -130%;
+        transform: translateX(90%);
+      }
+      #i2{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #reader{
+        font-size: 25px;
+      }
+      .content{
+        position: absolute;
+        width: 180%;
+        height: 60%;
+        text-align: center;
+        color: white;
+        transform: translateX(4%);
+      }
+      .social{
+        position: absolute;
+        width: 100%;
+        bottom: -115%;
+        left: 95%;
+      }
+      .fa{
+        background: transparent;
+        color: white;
+        width: 25px;
+        height: 20px;
+        margin-right: 10px;
+        font-size: 12px;
+        padding-top: 10px;
+        border: 1.5px solid white;
+        border-radius: 50%;
+        text-align: center;
+      }
+      .fa:hover{
+        opacity: 0.7;
+        transform: scale(1.05);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+
+    <div>
+      <img id="i1" src="Images/logo.svg">
+    </div>
+
+    <br>
+
+    <img id="i2" src="Images/illustration-mockups.svg"">
+
+    <div class="content">
+      <h1>Build The Community</h1>
+      <h1>Your Fans Will Love</h1>
+      <div id="reader">
+        Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
+        Create connections with your users as you engage in genuine discussion. 
+      </div>
+      <br>
+      <button>Register</button>
+
+    </div>
+
+    <div class="social">
+      <a href="#" class="fa fa-facebook"><span>facebook</span></a>
+      <a href="#" class="fa fa-twitter"><span>twitter</span></a>
+      <a href="#" class="fa fa-instagram"><span>instagram</span></a>
+    </div>
+
+    <a href="#" class="test" id="test1"></a>
+    <a href="#" class="test" id="test2"></a>
+    <a href="#" class="test" id="test3"></a>
+
+  </div>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Achyuth</a>.
+    </p>
+  </footer>
+</body>
+</html>
